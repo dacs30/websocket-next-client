@@ -12,7 +12,8 @@ export default function ChatPage() {
   const webSocketContext = useWebSocket();
 
   const handleGetToken = async () => {
-    const url = `http://localhost:8080/get-token?username=dacs`;
+    // use env variable for the API URL in production
+    const url = `http://localhost:8080/get-token?username=user1`;
 
     try {
       const response = await fetch(url, {

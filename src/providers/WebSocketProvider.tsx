@@ -41,6 +41,7 @@ export const WebSocketProvider = ({ children }: WebSocketProviderProps) => {
 
   const addListener = useCallback((listener: Function) => {
     if (wsService) {
+      console.log('Adding listener');
       wsService.addListener(listener);
     }
   }, [wsService]);
